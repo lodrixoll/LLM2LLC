@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 
 
@@ -6,13 +7,19 @@ const Home = () => {
 
     return (
         <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-t from-mint-start to-mint-end text-center py-5" style={{ fontFamily: 'Poppins, sans-serif' }}>
-            <nav className="w-full">
+            <nav className="w-full fixed top-10">
                 <div className="container mx-auto px-4 py-2 flex justify-between items-center">
                     <a className="text-2xl font-bold text-gray-900" href="#">LLM2LLC</a>
                     <div className="space-x-4">
-                        <a className="text-gray-700 hover:text-gray-900" href="#">Home</a>
-                        <a className="text-gray-700 hover:text-gray-900" href="#">Features</a>
-                        <a className="text-gray-700 hover:text-gray-900" href="#">Contact</a>
+                        <Link href="/" passHref>
+                            <span className="text-gray-700 hover:text-gray-900">Home</span>
+                        </Link>
+                        <Link href="/features" passHref>
+                            <span className="text-gray-700 hover:text-gray-900">Features</span>
+                        </Link>
+                        <Link href="/contact" passHref>
+                            <span className="text-gray-700 hover:text-gray-900">Contact</span>
+                        </Link>
                     </div>
                 </div>
             </nav>
@@ -26,17 +33,6 @@ const Home = () => {
                     <a className="bg-mint-500 text-white py-3 px-6 rounded-lg text-lg hover:bg-mint-600 transition duration-300" href="#" role="button">Get Started</a>
                     <a className="bg-gray-200 text-gray-700 py-3 px-6 rounded-lg text-lg hover:bg-gray-300 transition duration-300" href="#" role="button">Learn More</a>
                 </div>
-            </div>
-
-            <div className="container mx-auto text-center py-8">
-                <h2 className="text-4xl font-bold text-gray-900 mb-6">Features</h2>
-                <ul className="text-lg text-gray-700 space-y-4">
-                    <li><i className="fas fa-check text-gray-700 mr-2"></i> General Ledger & Expense Tracking</li>
-                    <li><i className="fas fa-check text-gray-700 mr-2"></i> File Storage & Record Keeping</li>
-                    <li><i className="fas fa-check text-gray-700 mr-2"></i> Get EIN & Business Banking Account</li>
-                    <li><i className="fas fa-check text-gray-700 mr-2"></i> Task Manager & Compliance</li>
-                    <li><i className="fas fa-check text-gray-700 mr-2"></i> 24/7 customer service</li>
-                </ul>
             </div>
 
             <footer className="mt-auto py-4 w-full">
