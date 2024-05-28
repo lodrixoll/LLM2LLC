@@ -19,7 +19,9 @@ const Dashboard = () => {
     }, [router]);
 
     if (loading) {
-        return <div>Loading...</div>;
+        return <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-t from-mint-start to-mint-end text-center py-5" style={{ fontFamily: 'Poppins, sans-serif' }}>
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">Loading...</h1>
+        </div>;
     }
 
     return (
