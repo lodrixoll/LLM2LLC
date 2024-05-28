@@ -16,6 +16,11 @@ export default NextAuth({
         GoogleProvider({
             clientId,
             clientSecret,
+            authorization: {
+                params: {
+                    scope: 'https://www.googleapis.com/auth/drive.readonly https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email',
+                },
+            },
         }),
     ],
     callbacks: {
@@ -70,7 +75,7 @@ export default NextAuth({
             });
 
             // if (dbUser) {
-            //     session.user.id = dbUser.id;
+                // session.user.id = dbUser.id;
             // }
 
             return session;
