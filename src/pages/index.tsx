@@ -15,7 +15,9 @@ const Home = () => {
                     <Link href="/register" passHref>
                         <span className="bg-mint-500 text-white py-3 px-6 rounded-lg text-lg hover:bg-mint-600 transition duration-300" role="button">Get Started</span>
                     </Link>
-                    <a className="bg-gray-200 text-gray-700 py-3 px-6 rounded-lg text-lg hover:bg-gray-300 transition duration-300" href="#" role="button">Learn More</a>
+                    <Link href="/features" passHref>
+                        <span className="bg-gray-200 text-gray-700 py-3 px-6 rounded-lg text-lg hover:bg-gray-300 transition duration-300" role="button">Learn More</span>
+                    </Link>
                 </div>
             </div>
             <footer className="mt-auto py-4 w-full">
