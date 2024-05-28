@@ -2,10 +2,16 @@ import React from 'react';
 import Navbar from '../components/Navbar';
 import { FaGoogle } from 'react-icons/fa';
 import { signIn } from 'next-auth/react';
+import { useRouter } from 'next/router';
 
 const Register = () => {
-    const handleGoogleSignIn = () => {
-        signIn('google');
+    const router = useRouter();
+
+    const handleGoogleSignIn = async () => {
+        const result = await signIn('google', { callbackUrl: '/dashboard' });
+        if (result?.url) {
+            router.push(result.url);
+        }
     };
 
     return (
