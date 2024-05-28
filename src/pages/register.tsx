@@ -14,22 +14,22 @@ const Register = () => {
                 <p className="text-xl text-gray-700 mb-6">Create your account to get started.</p>
                 <form className="w-full max-w-md mx-auto bg-white p-8 rounded-lg shadow-lg">
                     <div className="mb-4">
-                        <input
-                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-mint-500"
-                            type="text"
-                            placeholder="Full Name"
-                        />
+                    <input
+                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-mint-500 text-gray-700"
+                        type="text"
+                        placeholder="Full Name"
+                    />
                     </div>
                     <div className="mb-4">
                         <input
-                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-mint-500"
+                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-mint-500 text-gray-700"
                             type="email"
                             placeholder="Email"
                         />
                     </div>
                     <div className="mb-4">
                         <input
-                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-mint-500"
+                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-mint-500 text-gray-700"
                             type="password"
                             placeholder="Password"
                         />
