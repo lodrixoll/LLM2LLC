@@ -62,15 +62,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         const response = await drive.files.list({
             fields: 'files(id, name)',
         });
-        console.log('Files fetched successfully:', response.data);
+        console.log('Files fetched successfully');
         return res.status(200).json(response.data);
     } catch (error) {
         const errorMessage = error instanceof Error ? error.message : 'An unknown error occurred';
-        console.error('Error fetching files:', errorMessage, {
-            errorDetails: error,
-            user: session.user.email,
-            requestUrl: req.url,
-        });
+        console.error('Error fetching files:', errorMessage);
         return res.status(500).json({ error: errorMessage });
     }
 }
